@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p01 | Project Detail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #fff;
+      font-family: 'Wanted Sans', 'Pretendard', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .nav {
+      width: 100%;
+      padding: 0 36px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: transparent;
+    }
+    .main-content {
+      width: 100%;
+      max-width: 1060px;
+      margin: 60px auto 0 auto;
+      padding-bottom: 80px;
+      box-sizing: border-box;
+    }
+    .main-content__group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 120px;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .main-content__block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .main-content__thumbnail {
+      width: 100%;
+      max-width: 1060px;
+      height: auto;
+      aspect-ratio: 1060/615;
+      background: #eee;
+      border-radius: 18px;
+      margin-bottom: 0px;
+      object-fit: cover;
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+    .main-content__textgroup {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      max-width: 1060px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .main-content__title {
+      font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 56px;
+      color: #000;
+      margin-bottom: 0;
+      letter-spacing: -0.5px;
+      max-width: 1060px;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+    }
+    .main-content__section {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: space-between;
+    }
+    .main-content__desc {
+      width: 789px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 770px;
+    }
+    .main-content__desc-title {
+      font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .main-content__desc-text {
+      font-family: 'Wanted Sans', 'Pretendard', sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #47484B;
+    }
+    .main-content__info {
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .info-block {
+      background: transparent;
+      border-radius: 12px;
+      padding: 0;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      max-width: 160px;
+    }
+    .info-block__label {
+      font-family: 'Wanted Sans', 'Pretendard', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.57%;
+      color: #FF5E00;
+      margin-bottom: 8px;
+    }
+    .info-block__value {
+      font-family: 'Wanted Sans', 'Pretendard', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #222;
+    }
+    @media (max-width: 1200px) {
+      .main-content {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .main-content__thumbnail {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1100/615;
+      }
+      .main-content__section {
+        flex-direction: column;
+      }
+      .main-content__desc {
+        width: 100%;
+      }
+      .main-content__info {
+        width: 100%;
+        flex-direction: row;
+        gap: 16px;
+      }
+      .info-block {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo" style="text-decoration:none; color:inherit;">Choyoung</a>
+    <ul class="nav__menu">
+      <li>Work</li>
+      <li>Resume</li>
+      <li>About</li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <div class="main-content__group">
+      <div class="main-content__block">
+        <img src="p01-mainthumbnail.jpg" alt="썸네일" class="main-content__thumbnail">
+        <div class="main-content__textgroup">
+          <div class="main-content__title">패스오더</div>
+          <div class="main-content__section">
+            <div class="main-content__desc">
+              <div class="main-content__desc-title">커피 주문을 넘어, 카페 경험을 설계하다.</div>
+              <div class="main-content__desc-text">
+                패스오더는 주문, 결제, 적립을 하나의 흐름으로 제공하는 플랫폼입니다. 서비스가 성장함에 따라, 사용자와 가맹점 모두를 만족시키는 설계의 중요성이 더욱 커졌습니다. 본 프로젝트는 패스오더의 강점을 구체화하고, 경쟁력 있는 전략을 도출하는데 초점을 맞췄습니다.
+              </div>
+            </div>
+            <div class="main-content__info">
+              <div class="info-block">
+                <div class="info-block__label">ROLE</div>
+                <div class="info-block__value">UX 100%<br>UI 100%</div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__label">TEAM</div>
+                <div class="info-block__value">개인 작업</div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__label">TIMELINE</div>
+                <div class="info-block__value">2025.03 - 2025.04</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Content01: Figma 구조 반영 -->
+      <div class="content01">
+        <div class="content01__title">
+          <div class="content01__header-group">
+            <div class="content01__label">배경</div>
+            <div class="content01__main">패스오더는 400만 명 이상의 사용자가<br>이용하는 카페 사전 주문 플랫폼입니다.</div>
+          </div>
+          <div class="content01__desc">패스오더는 카페에서의 주문, 결제, 적립을 하나의 앱에서 미리 처리할 수 있도록 돕는 O2O(Online to Offline) 서비스입니다. 패스오더를 통해 고객은 줄 서지 않고 커피를 받을 수 있고, 사장님은 매장 운영을 더 효율적으로 관리할 수 있습니다.</div>
+        </div>
+        <div class="content01__thumbnail">
+          <div class="content01__thumbnail-bg">
+            <img src="p01-thumbnail02.jpg" alt="썸네일" class="content01__thumbnail-img">
+          </div>
+        </div>
+      </div>
+      <!-- // Content01 -->
+      <!-- Content02: Figma 구조 반영 -->
+      <div class="content02-block">
+        <div class="content02-title">
+          <div class="content02-label">문제</div>
+          <div class="content02-main">패스오더는 출시 이후 꾸준히 성장해왔지만<br>신규 사용자 유입률은 경쟁사에 비해 낮은 수준입니다.</div>
+          <span class="content02-point-text" style="display: flex; align-items: center; gap: 4px;">
+            <span>👉</span>
+            <span>어떻게 하면 신규 유입률을 높일 수 있을까요?</span>
+          </span>
+        </div>
+        <div class="content02-thumbnails">
+          <div class="content02-thumbnail">
+            <img src="p01-thumbnail03.svg" alt="썸네일03" class="content02-thumbnail-img">
+          </div>
+          <div class="content02-thumbnail">
+            <img src="p01-thumbnail04.svg" alt="썸네일04" class="content02-thumbnail-img">
+          </div>
+        </div>
+      </div>
+      <!-- // Content02 -->
+      <!-- Content03: Figma 구조 반영 -->
+      <div class="content03-block">
+        <div class="content03-title">
+          <div class="content03__header-group">
+            <div class="content03-label">분석</div>
+            <div class="content03-main">패스오더는 어떤 경쟁력을 가진 서비스일까요?</div>
+          </div>
+          <div class="content03-desc">단순히 새로운 유저를 끌어들이는 전략을 세우기에 앞서, 먼저 시장 내에서 패스오더만의 강점을 명확하게 파악하고자 했습니다. 패스오더가 사용자에게 어떤 가치를 제공하고 있는지 깊이 이해하고, 그 강점을 더욱 강화할 수 있는 방향으로 전략을 설계하기 위해서입니다.</div>
+        </div>
+        <div class="content03-boxset">
+          <div class="content03-thumbnails">
+            <div class="content03-thumbnail">
+              <img src="p01-thumbnail05.svg" alt="썸네일05" class="content03-thumbnail-img">
+            </div>
+            <div class="content03-thumbnail">
+              <img src="p01-thumbnail06.svg" alt="썸네일06" class="content03-thumbnail-img">
+            </div>
+          </div>
+          <div class="content03-bottom">
+            <div class="content03-bottom-inner">
+              <span class="content03-bottom-title">다양한 카페 경험을<br>연결하는 통합 서비스</span>
+              <span class="content03-bottom-and">&</span>
+              <span class="content03-bottom-title">카페 주문에 특화된<br>스마트 오더 플랫폼</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Content03 -->
+      <!-- Content04: Figma 구조 반영 -->
+      <div class="content04-block">
+        <div class="content04__header-group">
+          <div class="content04-title">가설</div>
+          <div class="content04-main"><strong>사용자들은 패스오더를 '미리 주문하는 앱'으로만 인식하고 있는 건 아닐까</strong>?</div>
+        </div>
+        <div class="content04-desc">
+          <p>패스오더는 다양한 카페를 하나의 앱에서 이용할 수 있는 통합 서비스이자, 카페 주문에 특화된 스마트 오더 플랫폼입니다. 현재 <strong>사용자들은 패스오더를 '미리 주문하는 앱'으로만 인식하고 있는 건 아닐까</strong> 하는 의문이 들었습니다. 실제로 패스오더 안에는 카페 탐색, 리뷰 작성, 쿠폰 거래 마켓 등 다양한 기능이 있지만, 사용자들이 어떤 기능을 자주 쓰고, 어떤 부분을 중요하게 여기는지는 명확하지 않았습니다.</p>
+          <p><strong>만약 '주문 기능'만 인식되고 있다면, 패스오더의 강점을 더 잘 전달하기 위한 전략이 필요하다</strong>고 생각했습니다. 이를 검증하기 위해, 2030 직장인 3명을 대상으로 사용자 테스트(UT)를 진행했습니다. 이들에게 실제로 패스오더 앱으로 커피를 주문해보도록 요청하고, 그 과정에서 느낀 점이나 궁금했던 점을 생각나는 대로 말해달라고 부탁했습니다. 또한 구글 플레이스토어와 애플 앱스토어에 등록된 최근 리뷰 약 300건도 함께 분석했습니다.</p>
+        </div>
+      </div>
+      <!-- // Content04 -->
+      <!-- Content05: Figma 구조 반영 -->
+      <div class="content05-block">
+        <div class="content05-title">
+          <div class="content05__header-group">
+            <div class="content05-label">문제점</div>
+            <div class="content05-main">유저 테스트를 통해 사용성 문제를 발견했습니다.</div>
+          </div>
+          <div class="content05-desc">
+            패스오더 사용자 테스트와 리뷰 분석 결과, 사용자들은 카페에서 미리 주문하는 과정을 중요하게 여기고 있으며, 특히 이미 알고 있는 카페에서 쉽고 빠르게 주문하는 것에 대한 니즈가 강하게 나타났습니다. 그러나 실제 주문 과정에서는 메뉴 탐색과 혜택 확인이 직관적이지 않다는 문제가 있었고, 추가로 주문 전후에 필요한 정보가 부족하다는 점도 확인할 수 있었습니다.
+          </div>
+        </div>
+        <!-- 문제1 -->
+        <div class="content05-problem">
+          <div class="content05-problem-title">1. 상황에 맞는 카페 탐색이 어려움</div>
+          <div class="content05-problem-row">
+            <div class="content05-thumbnail orange">
+              <img src="p01-thumbnail07.jpeg" alt="썸네일07" class="content05-thumbnail-img">
+            </div>
+            <div class="content05-thumbnail gray">
+              <img src="p01-thumbnail08.jpeg" alt="썸네일08" class="content05-thumbnail-img">
+            </div>
+          </div>
+        </div>
+        <!-- 문제2 -->
+        <div class="content05-problem">
+          <div class="content05-problem-title">2. 주문 흐름이 불편하고 매장별 혜택을 한눈에 파악하기 어려움</div>
+          <div class="content05-problem-row">
+            <div class="content05-thumbnail gray">
+              <img src="p01-thumbnail09.jpg" alt="썸네일09" class="content05-thumbnail-img">
+            </div>
+            <div class="content05-thumbnail orange">
+              <img src="p01-thumbnail10.jpg" alt="썸네일10" class="content05-thumbnail-img">
+            </div>
+          </div>
+        </div>
+        <!-- 문제3 -->
+        <div class="content05-problem">
+          <div class="content05-problem-title">3. 신뢰할 만한 리뷰 정보가 부족함</div>
+          <div class="content05-problem-row">
+            <div class="content05-thumbnail orange">
+              <img src="p01-thumbnail11.jpg" alt="썸네일11" class="content05-thumbnail-img">
+            </div>
+            <div class="content05-thumbnail gray">
+              <img src="p01-thumbnail12.jpg" alt="썸네일12" class="content05-thumbnail-img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Content05 -->
+      <!-- Content06: Figma 구조 반영 -->
+      <div class="content06-block">
+        <div class="content06-title-group">
+          <div class="content06-label">개선 방향</div>
+          <div class="content06-main">패스오더를 위한 전략을 정리했습니다.</div>
+        </div>
+        <div class="content06-thumbnail-group" style="display: flex; flex-direction: column; gap: 20px;">
+          <div class="content06-thumbnail">
+            <img src="p01-thumbnail13.jpg" alt="전략 요약 썸네일1" class="content06-thumbnail-img">
+          </div>
+          <div class="content06-desc">
+            앞서 발견한 문제점을 바탕으로, 주문 전후 과정의 사용자 경험을 개선하는 방향을 도출했습니다. 먼저, 사용자가 주문할 카페를 선별하고 주문하는 흐름을 더 매끄럽게 설계함으로써, 새로운 카페에서의 주문 경험을 자연스럽게 유도하고자 합니다. 또한, 다른 사용자들의 결정을 돕고 카페의 장점을 알릴 수 있도록, 공간 중심의 리뷰 작성을 유도하는 구조도 함께 제안합니다.
+          </div>
+        </div>
+        <div class="content06-thumbnail-group" style="display: flex; flex-direction: column; gap: 20px;">
+          <div class="content06-thumbnail">
+            <img src="p01-thumbnail14.jpg" alt="전략 요약 썸네일2" class="content06-thumbnail-img">
+          </div>
+          <div class="content06-desc">
+            기존의 패스오더는 '내 주변 카페에서 미리 주문해 대기 시간을 줄이는 서비스'로 인식되어 왔습니다. 이번 개선은 여기에 더해, 카페 탐색 기준을 다양화하고, 매장별 특색 있는 메뉴와 혜택 정보를 강화하는 방향으로 서비스의 성격을 확장하고자 합니다. 이러한 방향은 신규 사용자 유입을 늘리고, 기존 사용자 역시 더 오래 머물게 만드는 락인(Lock-in) 전략의 핵심 요소가 될 수 있다고 판단했습니다.
+          </div>
+        </div>
+      </div>
+      <!-- // Content06 -->
+      <!-- Content07: Figma 구조 반영 -->
+      <div class="content07-block">
+        <!-- Title 덩어리 -->
+        <div class="content07-title-group">
+          <div class="content07-label">디자인</div>
+          <div class="content07-main">개선 방향을 적용하여 화면을 디자인했습니다.</div>
+        </div>
+        <!-- Solution 덩어리 -->
+        <div class="content07-solution-group">
+          <!-- Set01 -->
+          <div class="content07-set">
+            <div class="content07-set-title">1. 카페 탐색 강화: 내 상황에 맞는 카페를 더 쉽고 빠르게 찾기</div>
+            <div class="content07-set-thumbnail">
+              <img src="p01-thumbnail15.jpg" alt="카페 탐색 강화 썸네일" class="content07-set-thumbnail-img">
+            </div>
+            <div class="content07-set-caption">
+              <div class="caption__header">
+                <div class="content07-set-caption-title">홈화면</div>
+                <div class="content07-set-caption-sub">주요 기능에 집중할 수 있는 홈화면</div>
+              </div>
+              <div class="content07-set-caption-desc">기존 홈 화면은 선물하기, 이벤트 배너 등 부가 기능이 여러 영역에 흩어져 있었고, 주요 기능인 카페 탐색과 주문은 스크롤을 내려야만 접근할 수 있는 구조였습니다. 이번 개선에서는 사용자가 탐색과 주문에 집중할 수 있도록 정보 구조를 재구성하고, 최근 주문한 메뉴를 홈 화면에 배치해 버튼 하나로 빠르게 재주문할 수 있도록 구성했습니다.</div>
+            </div>
+          </div>
+          <!-- Set02 -->
+          <div class="content07-set">
+            <div class="content07-set-title">2. 리스트 화면: 선택을 돕는 다양한 카페 큐레이션</div>
+            <div class="content07-set-thumbnail">
+              <img src="p01-thumbnail16.jpg" alt="리스트 화면 썸네일" class="content07-set-thumbnail-img">
+            </div>
+            <div class="content07-set-caption">
+              <div class="caption__header">
+                <div class="content07-set-caption-title">리스트 화면</div>
+                <div class="content07-set-caption-sub">선택을 돕는 다양한 카페 큐레이션</div>
+              </div>
+              <div class="content07-set-caption-desc">리스트 보기 화면에서는 사용자가 설정한 동네를 기준으로 카페 리스트를 제공합니다. 하지만 기존 리스트의 카테고리는 카페의 특성을 충분히 반영하지 못하고 단순하게 구성되어 있어, 사용자가 카페를 선택하는 데 필요한 정보를 충분히 전달하지 못한다는 문제가 있었습니다. 이를 개선하기 위해, 사용자의 취향과 상황에 맞는 큐레이션 리스트를 구성해 주변 카페 중에서도 적합한 장소를 쉽게 찾을 수 있도록 했습니다. 또한, 각 카페별로 재방문율, 주문 수, 단골 수 등의 세부 정보도 함께 제공해 선택을 도와주는 요소를 강화했습니다.</div>
+            </div>
+          </div>
+          <!-- Set03 -->
+          <div class="content07-set">
+            <div class="content07-set-title">3. 지도 화면: 탐색 기준을 명확하게, 정보는 직관적으로</div>
+            <div class="content07-set-thumbnail">
+              <img src="p01-thumbnail17.jpg" alt="지도 화면 썸네일" class="content07-set-thumbnail-img">
+            </div>
+            <div class="content07-set-caption">
+              <div class="caption__header">
+                <div class="content07-set-caption-title">지도 화면</div>
+                <div class="content07-set-caption-sub">탐색 기준을 명확하게, 정보는 직관적으로</div>
+              </div>
+              <div class="content07-set-caption-desc">
+                <p>[1] 기존에는 매장을 가까운 순, 이동거리 순으로 정렬하는 기능과 '영업 중', '신규 매장' 등 특정 조건으로 선별하는 기능이 혼재되어 있었습니다. 이번 개선에서는 정렬(Sorting)과 필터링(Filtering)의 역할을 명확히 구분하여, 사용자가 더 직관적으로 원하는 기준에 맞춰 매장을 탐색할 수 있도록 했습니다. 또한, '디저트', '프랜차이즈 전문' 등 사용자 행동과 니즈를 반영한 새로운 필터 항목을 추가해, 탐색 과정에서 불필요한 정보를 줄이고, 원하는 매장을 빠르게 찾을 수 있도록 개선했습니다.</p>
+                <p>[2] 사용자들은 전화 주문 기능을 거의 사용하지 않음에도 불구하고, 홈 화면과 지도에 전화 아이콘이 과도하게 노출되는 점에 불만을 가지고 있었습니다. 반면, 매장을 선택할 때는 이용 방식(테이크아웃/매장 이용 가능 여부)을 더 중요하게 고려하는 것으로 나타났습니다. 이에 따라, 지도 아이콘에서 전화 관련 요소는 제거하고, 대신 매장의 이용 방식을 한눈에 확인할 수 있도록 개선했습니다.</p>
+                <p>[3] 기존 지도 화면에서는 거리 기반의 추천 리스트가 제공되지 않아, 사용자가 주변 카페를 효율적으로 탐색하기 어려웠습니다. 이에 따라, 지도와 함께 내 주변 추천 카페를 확인할 수 있도록 리스트 뷰를 추가해 보다 직관적인 탐색 경험을 제공하도록 개선했습니다.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Set04 -->
+          <div class="content07-set">
+            <div class="content07-set-title">4. 주문 시스템 개선: 원하는 메뉴를 쉽게 주문하기</div>
+            <div class="content07-set-thumbnail">
+              <img src="p01-thumbnail18.jpg" alt="주문 시스템 개선 썸네일" class="content07-set-thumbnail-img">
+            </div>
+            <div class="content07-set-caption">
+              <div class="caption__header">
+                <div class="content07-set-caption-title">카페 상세 정보 화면</div>
+                <div class="content07-set-caption-sub">사용자 흐름에 맞춘 상세 화면</div>
+              </div>
+              <div class="content07-set-caption-desc"><p>UT 과정에서 사용자에게 '카페에서 음료를 주문해보라'는 미션을 주었을 때, 몇 가지 문제점을 발견할 수 있었습니다.</p>
+<p>[1] 사용자는 매장 정보를 확인하지 못한 채 지나치거나, 스크롤을 내려야만 중요한 정보를 볼 수 있다는 점에 불편함을 느꼈습니다. 이 문제를 해결하기 위해, 매장의 기본 정보와 혜택을 화면 상단에 고정하고, 더욱 직관적으로 전달되도록 정보 구조를 개편했습니다.</p>
+<p>[2] 사용자는 이용 방식을 선택하기 전에는 메뉴를 볼 수 없는 구조 때문에 초기 메뉴 탐색이 불편하다고 느꼈습니다. 기존의 '먹고 갈게요', '가져갈게요' 버튼을 누른 이후에 메뉴가 노출되던 흐름 대신, 메뉴를 먼저 보여주는 방식으로 개선했습니다.</p>
+<p>[3] 메뉴 구성 파악에 시간이 오래 걸린다는 피드백도 있었습니다. 이를 보완하기 위해, 매장별 인기 메뉴와 추천 메뉴를 라벨로 표시해 사용자가 더 쉽게 메뉴를 선택할 수 있도록 했습니다.</p></div>
+            </div>
+          </div>
+          <!-- Set05 -->
+          <div class="content07-set">
+            <div class="content07-set-title">5. 리뷰 시스템 개선: 한 잔의 커피를 넘어서 공간에 대한 경험을 나누기</div>
+            <div class="content07-set-thumbnail">
+              <img src="p01-thumbnail19.jpg" alt="리뷰 시스템 개선 썸네일" class="content07-set-thumbnail-img">
+            </div>
+            <div class="content07-set-caption">
+              <div class="caption__header">
+                <div class="content07-set-caption-title">리뷰 작성 화면</div>
+                <div class="content07-set-caption-sub">단순 후기에서 공간에 대한 경험을 공유하기</div>
+              </div>
+              <div class="content07-set-caption-desc">기존 리뷰는 음료나 서비스에 대한 내용에 한정되어 있었고, 장소나 경험에 대한 내용은 부족했습니다. 또한 작성된 리뷰 자체가 많지 않아, 리뷰가 없는 카페도 대부분이었습니다. 이에 따라, 리뷰 참여를 유도하고, 사진과 함께 다양한 경험을 담은 리뷰 작성을 활성화하고자 개선을 진행했습니다.
+사용자가 카페에서의 경험을 더 풍부하게 기록할 수 있도록, 작성 항목과 표현 방식을 재구성했습니다. 또한 이전보다 항목 수는 늘어났지만 작성 과정이 번거롭지 않도록 설계했습니다.</div>
+            </div>
+          </div>
+          <!-- Set06 -->
+          <div class="content07-set">
+            <div class="content07-set-title">6. 리뷰 화면: 풍부한 경험을 담은 리뷰</div>
+            <div class="content07-set-thumbnail">
+              <img src="p01-thumbnail20.jpg" alt="리뷰 화면 썸네일" class="content07-set-thumbnail-img">
+            </div>
+            <div class="content07-set-caption">
+              <div class="caption__header">
+                <div class="content07-set-caption-title">리뷰 화면</div>
+                <div class="content07-set-caption-sub">풍부한 경험을 담은 리뷰</div>
+              </div>
+              <div class="content07-set-caption-desc">
+                <p>기존의 리뷰는 음료 컵을 찍은 사진과 짧은 코멘트가 대부분이었습니다. 사용자들이 카페 공간, 분위기, 이용 경험까지 더욱 풍부하게 공유하고 확인할 수 있도록, 리뷰 화면을 개선했습니다.</p>
+                <p>[1] 리뷰 상단에 사용자가 작성 시 선택한 카페의 주요 특장점을 정리해 보여줍니다. 공간의 분위기, 디저트 특징 등 카페만의 강점이 강조된 리뷰를 쉽게 확인할 수 있습니다.</p>
+                <p>[2] 작성자의 방문 횟수, 이용 스타일 라벨, 팔로우 버튼 등을 통해 리뷰 작성자의 취향과 경험이 드러나도록 구성했습니다. 이로써 리뷰에 대한 신뢰도를 높이고, 사용자 간의 취향 기반 연결과 리뷰 작성 참여를 유도합니다.</p>
+                <p>[3] 서비스 내 리뷰가 없는 매장의 경우, 빈 화면이 아닌 외부 블로그 리뷰를 연동해 사용자가 카페에 대한 다양한 정보와 분위기를 미리 확인할 수 있도록 했습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Content07 -->
+
+      <!-- Content08: Figma 구조 반영 -->
+      <div class="content08-block">
+        <div class="content08__header-group">
+          <div class="content08__label">배운 점</div>
+          <div class="content08__main">패스오더 개선 프로젝트를 마무리하며</div>
+        </div>
+        <div class="content08__desc">
+          <p>패스오더는 카페 이용 고객뿐 아니라 카페 점주도 주요 사용자층입니다. 초기에는 이처럼 서비스 제공자와 이용자 모두가 고객이라는 구조를 고려해 분석 대상으로 선정했지만,실제 개선 과정에서는 점주용 앱 화면까지는 충분히 다루지 못한 아쉬움이 있었습니다. 접근성의 한계와 사용자 인터뷰의 어려움으로 인해, 결과적으로는 고객용 앱 중심으로 개선을 진행하게 되었습니다.</p>
+          <p>이번 프로젝트에서는 성장 중인 초기 서비스를 개선하면서, 네이버 플레이스, 카카오 지도, 캐치테이블 등 고도화된 앱 서비스를 다각도로 분석하고 참고했습니다. 이 과정에서 사용자에게 정보를 전달하는 방식, 탐색 구조의 구성, 그리고 리뷰 작성을 유도하는 설계 방법에 대한 인사이트를 얻을 수 있었습니다.</p>
+        </div>
+      </div>
+      <!-- // Content08 -->
+
+      <!-- Button_Bottom: Figma 구조 반영 -->
+      <div class="bottom-button-section">
+        <a href="#" class="next-project-button"> <!-- href는 실제 다음 프로젝트 링크로 변경 필요 -->
+          <div class="next-project-text-group">
+            <span class="next-project-label">Next Project</span>
+            <span class="next-project-title">네이버 시리즈온 케이스 스터디</span>
+          </div>
+          <div class="next-project-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1923 7.47218L1 7.47218V6.52782L11.1923 6.52782L6.33224 1.66776L7 1L13 7L7 13L6.33224 12.3322L11.1923 7.47218Z" fill="black" stroke="black" stroke-width="0.2"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <!-- // Button_Bottom -->
+
+    </div>
+  </div>
+  <script>
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+  const nav = document.querySelector('.nav');
+  let navVisible = true;
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 10) {
+          // 아래로 스크롤: 네비게이션 숨김
+          if (navVisible) {
+            nav.style.opacity = '0';
+            nav.style.pointerEvents = 'none';
+            nav.style.transition = 'opacity 0.4s';
+            navVisible = false;
+          }
+        } else {
+          // 위로 스크롤: 네비게이션 보임
+          if (!navVisible) {
+            nav.style.opacity = '1';
+            nav.style.pointerEvents = 'auto';
+            nav.style.transition = 'opacity 0.4s';
+            navVisible = true;
+          }
+        }
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  </script>
+</body>
+</html> 
