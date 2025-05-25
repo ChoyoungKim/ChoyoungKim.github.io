@@ -279,7 +279,7 @@ body {
   }
 }
 
-.nav__about, .nav__works {
+.nav__about, .nav__works, .nav__resume {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -307,6 +307,9 @@ body {
   display: block;
 }
 
+.nav__resume:hover .highlighter-img {
+  display: block;
+}
 
 /* Button_Bottom (Figma 구조 반영) */
 .bottom-button-section {
