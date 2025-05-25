@@ -15,7 +15,6 @@
 
 /* 폰트 적용 */
 body {
-  font-family: "Wanted Sans Variable", "Wanted Sans", 'Pretendard', sans-serif;
   background: #34D6FF;
   padding-top: 20px;
   /* 네비게이션이 fixed일 때 내용이 가려지지 않도록 */
