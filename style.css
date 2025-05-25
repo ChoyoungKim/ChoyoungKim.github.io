@@ -257,7 +257,7 @@ body {
 }
 
 .content02__text {
-  width: 504px;
+  width: 690px;
   font-weight: 400;
   font-size: 14px;
   color: #000000;
@@ -273,7 +273,7 @@ body {
   }
   .content02__text {
     width: 100%;
-    max-width: 504px;
+    max-width: 690px;
     text-align: center;
   }
 }
