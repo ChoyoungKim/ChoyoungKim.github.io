@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 36px 200px;
+  padding: 0 36px 300px;
   gap: 100px;
 }
 
@@ -165,7 +165,6 @@ body {
 }
 
 .nav__logo {
-  font-family: 'WantedSansVariable', 'Pretendard', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
@@ -185,7 +184,6 @@ body {
 }
 
 .nav__menu li {
-  font-family: 'WantedSansVariable', 'Pretendard', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
@@ -227,7 +225,6 @@ body {
 }
 
 .profile-info__name {
-  font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
   font-weight: bold;
   font-size: 56px;
   color: #000000;
@@ -236,7 +233,6 @@ body {
 }
 
 .profile-info__sub {
-  font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
   font-weight: 400;
   font-size: 12px;
   color: #000000;
@@ -264,7 +260,6 @@ body {
 
 .content02__text {
   width: 47.5%;
-  font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
   font-weight: 400;
   font-size: 14px;
   color: #000000;
@@ -338,17 +333,12 @@ body {
 }
 
 .next-project-label {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 24.93px; /* Figma 값에 근사 */
-  color: #000000;
   letter-spacing: 0.0288px;
 }
 
 .next-project-title {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 21.81px; /* Figma 값에 근사 */
   color: #37383c;
@@ -367,7 +357,6 @@ body {
 
 /* ===== Typography (Figma 규칙 기반) ===== */
 .typo-title {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 600; /* SemiBold */
   font-size: 40px;
   line-height: 52px;
@@ -375,7 +364,6 @@ body {
   color: #000;
 }
 .typo-heading {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 500; /* Medium */
   font-size: 28px;
   line-height: 38px;
@@ -384,7 +372,6 @@ body {
   margin: 0;
 }
 .typo-headline1 {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 500; /* Medium */
   font-size: 24px;
   line-height: 34px;
@@ -392,7 +379,6 @@ body {
   color: #000;
 }
 .typo-headline2 {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 500; /* Medium */
   font-size: 20px;
   line-height: 28px;
@@ -400,7 +386,6 @@ body {
   color: #000;
 }
 .typo-headline3 {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 700; /* Bold */
   font-size: 16px;
   line-height: 28px;
@@ -408,7 +393,6 @@ body {
   color: #000;
 }
 .typo-body {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 400; /* Regular */
   font-size: 16px;
   line-height: 28px;
@@ -417,7 +401,6 @@ body {
   margin: 0;
 }
 .typo-caption {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 400; /* Regular */
   font-size: 14px;
   line-height: 22px;
@@ -464,7 +447,6 @@ body {
 }
 
 .typo-headline3 {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
   font-weight: 700; /* Bold */
   font-size: 16px;
   line-height: 28px;
@@ -527,8 +509,6 @@ body {
 }
 
 .main-content__title {
-  font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
-  font-weight: 700;
   font-size: 36px;
   line-height: 56px;
   color: #000000;
@@ -554,8 +534,6 @@ body {
 }
 
 .main-content__desc-title {
-  font-family: 'Wanted Sans', 'Pretendard', 'sans-serif';
-  font-weight: 700;
   font-size: 26px;
   line-height: 38px;
   color: #000000;
@@ -563,8 +541,6 @@ body {
 }
 
 .main-content__desc-text {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: -0.192px;
@@ -578,8 +554,6 @@ body {
 }
 
 .main-content__hashtag {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 600;
   font-size: 18px;
   line-height: 24px;
   color: #2edb75;
@@ -600,8 +574,6 @@ body {
 }
 
 .info-block__label {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 700;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
@@ -609,8 +581,6 @@ body {
 }
 
 .info-block__value {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
@@ -746,8 +716,6 @@ body {
 }
 
 .typo-headline1 {
-  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
-  font-weight: 500;
   font-size: 24px;
   line-height: 34px;
   letter-spacing: -0.6px;
@@ -1230,8 +1198,6 @@ body {
 }
 
 .g-section__label {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 700;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
@@ -1239,8 +1205,6 @@ body {
 }
 
 .g-section__main {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 500;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.6px;
@@ -1248,8 +1212,6 @@ body {
 }
 
 .g-section__point-text {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 600;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
@@ -1312,8 +1274,6 @@ body {
 }
 
 .g2-section__label {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 700;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
@@ -1321,8 +1281,6 @@ body {
 }
 
 .g2-section__main {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 500;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: -0.6px;
@@ -1330,8 +1288,6 @@ body {
 }
 
 .g2-section__desc {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
@@ -1441,16 +1397,12 @@ body {
 }
 
 .project-nav-title {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 400;
   font-size: 16px;
   color: #000;
   line-height: 24px;
 }
 
 .project-nav-name {
-  font-family: 'Wanted Sans', sans-serif;
-  font-weight: 400;
   font-size: 14px;
   color: #858688;
   line-height: 22px;
