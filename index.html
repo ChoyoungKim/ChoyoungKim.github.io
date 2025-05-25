@@ -6,8 +6,9 @@
   <title>Choyoung Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/complete/WantedSansVariable.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous" />
+  <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -46,104 +47,73 @@
     </div>
   </div>
   <main class="cards">
-    <div class="card-section">
-      <h2 class="typo-headline1" style="margin: 20px 0;">Product Design</h2>
-      <div class="cards__row">
-        <div class="cards__container">
-          <a href="p01.html" class="card-link">
-            <section class="card">
-              <div class="card__thumbnail card__thumbnail--p01"></div>
-              <div class="card__content">
-                <div class="card__desc-title">패스오더</div>
-                <div class="card__desc-sub">어쩌구 저쩌구를 위한 어쩌구</div>
-                <div class="card__caption">
-                  <span class="caption__item">Case Study</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">App</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">2025</span>
-                </div>
-              </div>
-            </section>
-          </a>
-          <a href="p02.html" class="card-link">
-            <section class="card">
-              <div class="card__thumbnail card__thumbnail--p02"></div>
-              <div class="card__content">
-                <div class="card__desc-title">시리즈온</div>
-                <div class="card__desc-sub">어쩌구 저쩌구를 위한 어쩌구</div>
-                <div class="card__caption">
-                  <span class="caption__item">Case Study</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">App</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">2025</span>
-                </div>
-              </div>
-            </section>
-          </a>
-        </div>
-        
-        <div class="cards__container">
-          <a href="p03.html" class="card-link">
-            <section class="card">
-              <div class="card__thumbnail card__thumbnail--p03"></div>
-              <div class="card__content">
-                <div class="card__desc-title">프로젝트 3</div>
-                <div class="card__desc-sub">모바일 앱 UX/UI 디자인</div>
-                <div class="card__caption">
-                  <span class="caption__item">Case Study</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">App</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">2025</span>
-                </div>
-              </div>
-            </section>
-          </a>
-          <a href="p04.html" class="card-link">
-            <section class="card">
-              <div class="card__thumbnail"></div>
-              <div class="card__content">
-                <div class="card__desc-title">데이터 플랫폼</div>
-                <div class="card__desc-sub">데이터 시각화 대시보드 디자인</div>
-                <div class="card__caption">
-                  <span class="caption__item">Case Study</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">Dashboard</span>
-                  <span class="caption__divider"></span>
-                  <span class="caption__item">2025</span>
-                </div>
-              </div>
-            </section>
-          </a>
-        </div>
-      </div>
+    <div class="cards--row">
+      <a href="p01.html">
+        <section class="card">
+          <div class="card__thumbnail card__thumbnail--p01"></div>
+          <div class="card__content">
+            <div class="card__desc-title">패스오더</div>
+            <div class="card__desc-sub">어쩌구 저쩌구를 위한 어쩌구</div>
+            <div class="card__caption">
+              <span class="caption__item">Case Study</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">App</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">2025</span>
+            </div>
+          </div>
+        </section>
+      </a>
+      <a href="p02.html">
+        <section class="card">
+          <div class="card__thumbnail card__thumbnail--p02"></div>
+          <div class="card__content">
+            <div class="card__desc-title">시리즈온</div>
+            <div class="card__desc-sub">어쩌구 저쩌구를 위한 어쩌구</div>
+            <div class="card__caption">
+              <span class="caption__item">Case Study</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">App</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">2025</span>
+            </div>
+          </div>
+        </section>
+      </a>
     </div>
-    
-
-
-    <div class="card-section">
-      <h2 class="typo-headline1" style="margin: 20px 0;">3D Modeling</h2>
-      <div class="square-cards__container">
-        <a href="#" class="square-card-link">
-          <section class="square-card">
-            <div class="square-card__thumbnail"></div>
-          </section>
-        </a>
-        
-        <a href="#" class="square-card-link">
-          <section class="square-card">
-            <div class="square-card__thumbnail"></div>
-          </section>
-        </a>
-        
-        <a href="#" class="square-card-link">
-          <section class="square-card">
-            <div class="square-card__thumbnail"></div>
-          </section>
-        </a>
-      </div>
+    <div class="cards--row">
+      <a href="p03.html">
+        <section class="card">
+          <div class="card__thumbnail card__thumbnail--p03"></div>
+          <div class="card__content">
+            <div class="card__desc-title">프로젝트 3</div>
+            <div class="card__desc-sub">모바일 앱 UX/UI 디자인</div>
+            <div class="card__caption">
+              <span class="caption__item">Case Study</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">App</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">2025</span>
+            </div>
+          </div>
+        </section>
+      </a>
+      <a href="p04.html">
+        <section class="card">
+          <div class="card__thumbnail"></div>
+          <div class="card__content">
+            <div class="card__desc-title">데이터 플랫폼</div>
+            <div class="card__desc-sub">데이터 시각화 대시보드 디자인</div>
+            <div class="card__caption">
+              <span class="caption__item">Case Study</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">Dashboard</span>
+              <span class="caption__divider"></span>
+              <span class="caption__item">2025</span>
+            </div>
+          </div>
+        </section>
+      </a>
     </div>
   </main>
   <style>

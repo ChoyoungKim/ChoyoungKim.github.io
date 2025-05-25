@@ -7,7 +7,7 @@
 
 /* 폰트 적용 */
 body {
-  font-family: 'WantedSansVariable', 'Pretendard', sans-serif;
+  font-family: "Wanted Sans Variable", "Wanted Sans", 'Pretendard', sans-serif;
   background: #34D6FF;
   padding-top: 20px;
   /* 네비게이션이 fixed일 때 내용이 가려지지 않도록 */
@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 200px;
+  padding: 0 36px 200px;
   gap: 100px;
 }
 
@@ -31,20 +31,15 @@ body {
   flex-direction: row;
   gap: 20px;
   max-width: 1400px;
-  margin: 0 auto;
   width: 100%;
-  margin-bottom: 40px;
-}
-.cards--row:last-child {
-  margin-bottom: 0;
 }
 
-.cards--row > a,
-.cards--row > section {
+.cards--row > a {
   flex: 1 1 0;
   min-width: 0;
   max-width: 690px;
-  display: flex;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card {
@@ -59,39 +54,6 @@ body {
   border-radius: 0;
 }
 
-.card--image-only {
-  width: 440px;
-  min-width: 440px;
-  max-width: 440px;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.card--image-only .card__thumbnail {
-  border-radius: 14px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-}
-
-.card--text-only {
-  width: 440px;
-  min-width: 440px;
-  max-width: 440px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card--text-only .card__content {
-  padding: 40px 32px 40px 32px;
-}
-
 .card__thumbnail {
   width: 100%;
   aspect-ratio: 440 / 295;
@@ -103,21 +65,21 @@ body {
 }
 
 .card__thumbnail--p01 {
-  background-image: url('images/pd-card01.jpg');
+  background-image: url('./images/pd-card01.jpg');
   background-size: cover;
   background-position: center;
   background-color: transparent;
 }
 
 .card__thumbnail--p02 {
-  background-image: url('images/pd-card02.jpg');
+  background-image: url('./images/pd-card02.jpg');
   background-size: cover;
   background-position: center;
   background-color: transparent;
 }
 
 .card__thumbnail--p03 {
-  background-image: url('images/pd-card03.jpg');
+  background-image: url('./images/pd-card03.jpg');
   background-size: cover;
   background-position: center;
   background-color: transparent;
