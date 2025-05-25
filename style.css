@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-/* Pretendard 폰트 적용 */
+/* 폰트 적용 */
 body {
-  font-family: 'Wanted Sans Variable', 'Wanted Sans', 'Pretendard', sans-serif;
+  font-family: 'WantedSansVariable', 'Pretendard', sans-serif;
   background: #34D6FF;
   padding-top: 20px;
   /* 네비게이션이 fixed일 때 내용이 가려지지 않도록 */
@@ -195,7 +195,7 @@ body {
 }
 
 .nav__logo {
-  font-family: 'Wanted Sans Variable', 'Wanted Sans', 'Pretendard', sans-serif;
+  font-family: 'WantedSansVariable', 'Pretendard', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
@@ -215,7 +215,7 @@ body {
 }
 
 .nav__menu li {
-  font-family: 'Wanted Sans Variable', 'Wanted Sans', 'Pretendard', sans-serif;
+  font-family: 'WantedSansVariable', 'Pretendard', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
