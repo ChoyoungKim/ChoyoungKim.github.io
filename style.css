@@ -249,22 +249,21 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 36px;
+  gap: 20px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-left: 36px;
-  padding-right: 36px;
 }
 
 .content02__text {
-  width: 47.5%;
+  width: 504px;
   font-weight: 400;
   font-size: 14px;
   color: #000000;
   line-height: 170%;
   text-align: left;
+  white-space: normal;
 }
 
 @media (max-width: 900px) {
@@ -274,6 +273,7 @@ body {
   }
   .content02__text {
     width: 100%;
+    max-width: 504px;
     text-align: center;
   }
 }
@@ -1445,7 +1445,7 @@ body {
 .cards {
   display: flex;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 20px 300px;  /* 좌우 여백 20px 유지하면서 하단 여백 300px 추가 */
 }
 
 .card-section {
