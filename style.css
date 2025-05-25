@@ -28,8 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 36px 300px;  /* 좌우 36px로 통일 */
-  gap: 100px;
+  padding: 0 36px 200px;  /* 좌우 36px로 통일 */
+  gap: 56px;
 }
 
 /* 한 줄에 카드 2개, gap 20px, 최대 1400px */
@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   background: none;
   box-shadow: none;
   border-radius: 0;
@@ -92,12 +92,19 @@ body {
   background-color: transparent;
 }
 
+.card__thumbnail--p04 {
+  background-image: url('./images/pd-card04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+
 .card__content {
   width: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   background: none;
   box-shadow: none;
   align-items: flex-start;
@@ -109,7 +116,6 @@ body {
   line-height: 24px;
   letter-spacing: -0.24px;
   color: #000;
-  margin-bottom: 2px;
 }
 
 .card__desc-sub {
@@ -210,22 +216,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 120px;
   margin-bottom: 300px;
 }
 
 .profile-info__img {
-  width: 138px;
-  height: 138px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: contain;
-  margin-bottom: 20px;
-  transform: rotate(-21.92deg);
+  transform: rotate(-35deg);
 }
 
 .profile-info__name {
-  font-weight: bold;
-  font-size: 56px;
+  font-weight: 600;
+  font-size: 42px;
   color: #000000;
   margin-bottom: 20px;
   text-align: center;
@@ -409,6 +414,7 @@ body {
   line-height: 22px;
   letter-spacing: -0.6px;
   color: #7B7B7B;
+  text-align: center;
 }
 
 /* TitleSection 썸네일 영역 (Figma 기준) */
@@ -480,8 +486,6 @@ body {
   width: 100%;
   max-width: 1060px;
   margin: 20px auto 0 auto;
-  padding-top: 20px;
-  padding-bottom: 20px; /* 더 축소하여 여백 줄임 */
   box-sizing: border-box;
 }
 
@@ -576,18 +580,15 @@ body {
   padding: 0;
 }
 
-.info-block__label {
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.192px;
-  color: #2edb75;
-}
-
 .info-block__value {
   font-size: 16px;
   line-height: 28px;
   letter-spacing: -0.192px;
   color: #333D4B;
+}
+
+.main-content__info .typo-headline3 {
+  color: #2EDB75;
 }
 
 @media (max-width: 1200px) {
@@ -644,26 +645,33 @@ body {
   color: #222;
 }
 
-/* title-section 오렌지 테마 변형 */
-.title-section--orange .info-block__label {
-  color: #FF5E00; /* 기존 초록색에서 오렌지색으로 변경 */
+/* p04 페이지 배경색 설정 */
+.p04-page {
+  background: #fff;
+  color: #222;
 }
 
+/* title-section 오렌지 테마 변형 */
 .title-section--orange .typo-headline3 {
   color: #FF5E00; /* 해시태그 색상도 오렌지색으로 변경 */
 }
 
 /* title-section 빨간색 테마 변형 */
-.title-section--red .info-block__label {
-  color: #F3463C; /* 기존 초록색에서 빨간색으로 변경 */
-}
-
 .title-section--red .typo-headline3 {
   color: #F3463C; /* 해시태그 색상도 빨간색으로 변경 */
 }
 
 .title-section--orange .title-section__thumbnail-area {
   background: #FFF3EE; /* 썸네일 배경색을 오렌지 계열 연한 색으로 변경 */
+}
+
+/* title-section 파란색 테마 변형 */
+.title-section--blue .typo-headline3 {
+  color: #3385FF;
+}
+
+.title-section--blue .title-section__thumbnail-area {
+  background: #F5F9FF;
 }
 
 /* A_Section 스타일 */
@@ -699,12 +707,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 520px;
 }
 
 .a-section__thumbnail-image {
   width: 100%;
-  aspect-ratio: 520 / 370;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  min-height: 520px;
   object-fit: cover;
   border-radius: 14px;
 }
@@ -725,7 +734,7 @@ body {
   color: #000;
 }
 
-/* 반응형 스타일 */
+/* A_Section 반응형 스타일 */
 @media (max-width: 1100px) {
   .a-section {
     padding-left: 16px;
@@ -744,6 +753,12 @@ body {
   .a-section__thumbnail {
     max-width: 100%;
     width: 100%;
+    min-width: auto;
+  }
+
+  .a-section__thumbnail-image {
+    min-height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -880,7 +895,20 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px; /* 모든 요소 사이의 간격을 32px로 설정 */
+  gap: 32px;
+}
+
+.d-section__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.d-section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .d-section__thumbnail {
@@ -899,13 +927,6 @@ body {
   object-fit: contain; /* 이미지가 잘리지 않도록 contain 사용 */
   border-radius: 14px;
   background-color: #f7f7f8; /* 배경색 추가 */
-}
-
-.d-section__body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 /* D_Section 반응형 스타일 */
@@ -1200,13 +1221,6 @@ body {
   gap: 4px;
 }
 
-.g-section__label {
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.192px;
-  color: #ff5e00;
-}
-
 .g-section__main {
   font-size: 20px;
   line-height: 28px;
@@ -1274,13 +1288,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
-}
-
-.g2-section__label {
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.192px;
-  color: #ff5e00;
 }
 
 .g2-section__main {
@@ -1527,6 +1534,33 @@ body {
 @media (max-width: 768px) {
   .square-card-link {
     flex: 1 1 100%;
+  }
+}
+
+.about-page {
+  background-color: #E0FAFF;
+}
+
+.d-section__title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.d-section__title .typo-headline3 {
+  color: #16D0FF;
+}
+
+.content-group--60 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .content-group--60 {
+    gap: 40px;
   }
 }
 

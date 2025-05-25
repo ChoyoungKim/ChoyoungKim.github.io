@@ -8,7 +8,7 @@
 </head>
 <body class="p01n-page">
   <nav class="nav">
-    <a href="index.html" class="nav__logo">CHOYOUNG KIM</a>
+    <a href="index.html#top" class="nav__logo">CHOYOUNG KIM</a>
     <ul class="nav__menu">
       <li class="nav__works" id="navWork">
         <span>WORKS</span>
@@ -44,15 +44,15 @@
             
             <div class="main-content__info">
               <div class="info-block">
-                <div class="info-block__label">ROLE</div>
+                <div class="typo-headline3">ROLE</div>
                 <div class="info-block__value">UX 100% UI 100%</div>
               </div>
               <div class="info-block">
-                <div class="info-block__label">TEAM</div>
+                <div class="typo-headline3">TEAM</div>
                 <div class="info-block__value">개인 작업</div>
               </div>
               <div class="info-block">
-                <div class="info-block__label">TIMELINE</div>
+                <div class="typo-headline3">TIMELINE</div>
                 <div class="info-block__value">2025.03 - 2025.04</div>
               </div>
             </div>
@@ -80,7 +80,7 @@
       <!-- G_Section: 피그마 구조 반영 -->
       <section class="g-section">
         <div class="g-section__title">
-          <div class="g-section__label">과제</div>
+          <div class="typo-headline3 orange-text">과제</div>
           <h3 class="typo-headline1">패스오더는 출시 이후 꾸준히 성장해왔지만<br>신규 사용자 유입률은 경쟁사에 비해 낮은 수준입니다.</h3>
           <div class="g-section__point-text">
             <span>👉</span>
@@ -100,7 +100,7 @@
       <!-- G2_Section: 피그마 구조 반영 -->
       <section class="g2-section">
         <div class="g2-section__title">
-          <div class="g2-section__label">분석</div>
+          <div class="typo-headline3 orange-text">분석</div>
           <h3 class="typo-headline1">패스오더는 어떤 경쟁력을 가진 서비스일까요?</h3>
           <div class="g2-section__desc">단순히 새로운 유저를 끌어들이는 전략을 세우기에 앞서, 먼저 시장 내에서 패스오더만의 강점을 명확하게 파악하고자 했습니다. 패스오더가 사용자에게 어떤 가치를 제공하고 있는지 깊이 이해하고, 그 강점을 더욱 강화할 수 있는 방향으로 전략을 설계하기 위해서입니다.</div>
         </div>
@@ -407,6 +407,12 @@
     }
   }
   window.addEventListener('scroll', onScroll);
+
+  // Works 클릭 시 index.html의 works 섹션으로 이동
+  document.getElementById('navWork').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'index.html#works';
+  });
   </script>
 </body>
 </html> 
