@@ -11,6 +11,8 @@ body {
   background: #34D6FF;
   padding-top: 20px;
   /* 네비게이션이 fixed일 때 내용이 가려지지 않도록 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* 카드 전체 컨테이너: 2x2 배열, 행 사이 20px */
@@ -20,7 +22,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 200px;
-  gap: 20px;
+  gap: 100px;
 }
 
 /* 한 줄에 카드 2개, gap 20px, 최대 1400px */
@@ -100,6 +102,27 @@ body {
   display: block;
 }
 
+.card__thumbnail--p01 {
+  background-image: url('images/pd-card01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+
+.card__thumbnail--p02 {
+  background-image: url('images/pd-card02.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+
+.card__thumbnail--p03 {
+  background-image: url('images/pd-card03.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+
 .card__content {
   width: 100%;
   padding: 0;
@@ -126,7 +149,7 @@ body {
   line-height: 21.6px;
   letter-spacing: -0.192px;
   color: #000;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .card__caption {
@@ -606,6 +629,24 @@ body {
   padding: 0;
 }
 
+.info-block__label {
+  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.192px;
+  color: #2edb75;
+}
+
+.info-block__value {
+  font-family: 'Wanted Sans', 'Pretendard', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.192px;
+  color: #333D4B;
+}
+
 @media (max-width: 1200px) {
   .main-content {
     padding-left: 16px;
@@ -654,6 +695,12 @@ body {
   color: #222;
 }
 
+/* p03 페이지 배경색 설정 */
+.p03-page {
+  background: #fff;
+  color: #222;
+}
+
 /* title-section 오렌지 테마 변형 */
 .title-section--orange .info-block__label {
   color: #FF5E00; /* 기존 초록색에서 오렌지색으로 변경 */
@@ -661,6 +708,15 @@ body {
 
 .title-section--orange .typo-headline3 {
   color: #FF5E00; /* 해시태그 색상도 오렌지색으로 변경 */
+}
+
+/* title-section 빨간색 테마 변형 */
+.title-section--red .info-block__label {
+  color: #F3463C; /* 기존 초록색에서 빨간색으로 변경 */
+}
+
+.title-section--red .typo-headline3 {
+  color: #F3463C; /* 해시태그 색상도 빨간색으로 변경 */
 }
 
 .title-section--orange .title-section__thumbnail-area {
@@ -1379,6 +1435,87 @@ body {
 @media (max-width: 768px) {
   .problems-container {
     gap: 60px;
+  }
+}
+
+/* 프로젝트 네비게이션 스타일 */
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 0;
+  padding: 40px 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.prev-project, .next-project {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.prev-project:hover, .next-project:hover {
+  opacity: 0.7;
+}
+
+.prev-project .arrow, .next-project .arrow {
+  font-size: 20px;
+  color: #000;
+  margin: 0 12px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-nav-title {
+  font-family: 'Wanted Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  line-height: 24px;
+}
+
+.project-nav-name {
+  font-family: 'Wanted Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #858688;
+  line-height: 22px;
+}
+
+.next-project .project-info {
+  text-align: right;
+}
+
+/* main-content__group 스타일 - 섹션 간격 설정 */
+.main-content__group {
+  display: flex;
+  flex-direction: column;
+  gap: 160px; /* 섹션들 사이의 간격을 100px로 설정 */
+}
+
+/* 모바일 화면에서는 간격 조정 */
+@media (max-width: 768px) {
+  .main-content__group {
+    gap: 60px; /* 모바일에서는 더 작은 간격으로 조정 */
+  }
+}
+
+/* 디자인 섹션 컨테이너 스타일 */
+.design-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* 디자인 섹션 내부 요소 간 간격 */
+}
+
+/* 모바일 화면에서 간격 조정 */
+@media (max-width: 768px) {
+  .design-container {
+    gap: 24px;
   }
 }
 

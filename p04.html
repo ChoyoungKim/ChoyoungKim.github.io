@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p04 | 데이터 플랫폼</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Wanted+Sans:wght@400;500;600;700;800&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="p04-page" style="background-color: #ffffff;">
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Choyoung</a>
+    <ul class="nav__menu">
+      <li>Work</li>
+      <li>Resume</li>
+      <li>About</li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="main-content__group">
+      <!-- 여기에 본문 내용이 추가될 예정입니다 -->
+    </div>
+  </main>
+
+  <script>
+    // 스크롤시 네비게이션 동작
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html> 
