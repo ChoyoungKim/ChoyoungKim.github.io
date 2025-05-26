@@ -205,7 +205,7 @@ body {
 }
 
 .main-hero {
-  min-height: 100vh;
+  min-height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -217,7 +217,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 120px;
-  margin-bottom: 300px;
+  margin-bottom: 240px;
 }
 
 .profile-info__img {
