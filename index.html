@@ -266,9 +266,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-var locoVars = {"templateUrl":"","ajaxUrl":""};
-</script>
 <!-- Swiper Creative 초기화 -->
 <script>
 new Swiper(".showreel-swiper", {
@@ -294,7 +291,6 @@ if (window.innerWidth > 1181) {
 <script src="loco-main.js"></script>
 <!-- 네비 스크롤, 히어로 페이드아웃, 앵커 스크롤 -->
 <script>
-gsap.registerPlugin(ScrollTrigger);
 gsap.set(".headline--zen .headline__inner", { opacity: 1, y: 0, visibility: "visible" });
 document.querySelectorAll('.nav-menu__link[href^="#"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
