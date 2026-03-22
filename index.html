@@ -1,169 +1,332 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html dir="ltr" lang="ko-KR" class="lenis">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choyoung Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body id="top">
-  <nav class="nav">
-    <a href="#top" class="nav__logo">CHOYOUNG KIM</a>
-    <ul class="nav__menu">
-      <li class="nav__works" id="navWork">
-        <span>WORKS</span>
-        <img src="./highlighter_works.svg" alt="하이라이터" class="highlighter-img">
-      </li>
-      <li class="nav__about" id="navAbout">
-        <a href="about.html" style="text-decoration: none; color: inherit;">ABOUT</a>
-        <img src="./highlighter_about.svg" alt="하이라이터" class="highlighter-img">
-      </li>
-      <li class="nav__resume">
-        <a href="./CHOYOUNG_KIM_Resume.pdf" download="CHOYOUNG_KIM_Resume.pdf" style="text-decoration: none; color: inherit;">RESUME</a>
-        <img src="./highlighter_resume.svg" alt="" class="highlighter-img">
-      </li>
-    </ul>
-  </nav>
-  <div class="main-hero">
-    <div class="profile-info">
-      <img src="./magnifier.png" alt="프로필 이미지" class="profile-info__img">
-      <div class="profile-info__name">집요하게 문제를 해결하는 디자이너</div>
-      <div class="profile-info__sub typo-body">UX/UI Design</div>
-      <div class="profile-info__sub typo-body">Motion Graphic</div>
-    </div>
-    <div class="content02">
-      <div class="content02__text typo-body">
-        저는 광고 영상 디자이너로 4년간 근무하며, 매주 A/B 테스트를 기획하고 실행했습니다.
-        총 400건 이상의 실험을 통해 기획을 개선한 결과, 2년 연속 성과가 가장 우수한 디자이너로 선정되었습니다.
-        저는 가설을 세우고 실험과 데이터를 통해 디자인을 개선하는 일에 강점이 있습니다.
-      </div>
-      <div class="content02__text typo-body">
-        이제는 이 경험과 감각을 UX/UI 디자인으로 확장해, 사용자의 문제를 해결하고 서비스의 가치를 높이고자 합니다.
-        '좋은 디자인'이란 보기 좋은 것이 아니라, 상황과 목적에 맞게 기획된 결과물이라고 믿습니다.
-        쉽게 포기하지 않는 끈기와 높은 책임감을 바탕으로, 최적의 솔루션을 도출하는 프로덕트 디자이너가 되겠습니다.
-      </div>
-    </div>
-  </div>
-  <main class="cards" id="works">
-    <div class="cards--row">
-      <a href="p01.html">
-        <section class="card">
-          <div class="card__thumbnail card__thumbnail--p01"></div>
-          <div class="card__content">
-            <div class="card__desc-title">패스오더 리디자인</div>
-            <div class="card__desc-sub">커피 주문을 넘어, 카페 경험을 설계하다.</div>
-            <div class="card__caption">
-              <span class="caption__item">Case Study</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">App</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">2025</span>
-            </div>
-          </div>
-        </section>
-      </a>
-      <a href="p02.html">
-        <section class="card">
-          <div class="card__thumbnail card__thumbnail--p02"></div>
-          <div class="card__content">
-            <div class="card__desc-title">시리즈온 리디자인</div>
-            <div class="card__desc-sub">콘텐츠 탐색 경험과 구매 경험 개선하기</div>
-            <div class="card__caption">
-              <span class="caption__item">Case Study</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">App</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">2024</span>
-            </div>
-          </div>
-        </section>
-      </a>
-    </div>
-    <div class="cards--row">
-      <a href="p03.html">
-        <section class="card">
-          <div class="card__thumbnail card__thumbnail--p03"></div>
-          <div class="card__content">
-            <div class="card__desc-title">DOPE</div>
-            <div class="card__desc-sub">게임 정보 공유 커뮤니티 플랫폼</div>
-            <div class="card__caption">
-              <span class="caption__item">Personal Project</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">App</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">2024</span>
-            </div>
-          </div>
-        </section>
-      </a>
-      <a href="p04.html">
-        <section class="card">
-          <div class="card__thumbnail card__thumbnail--p04"></div>
-          <div class="card__content">
-            <div class="card__desc-title">데이터 시각화 플랫폼</div>
-            <div class="card__desc-sub">빠르고 정확한 광고 성과 분석 툴</div>
-            <div class="card__caption">
-              <span class="caption__item">Professional Project</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">Web</span>
-              <span class="caption__divider"></span>
-              <span class="caption__item">2021</span>
-            </div>
-          </div>
-        </section>
-      </a>
-    </div>
-  </main>
-  <script>
-  let lastScrollY = window.scrollY;
-  let ticking = false;
-  const nav = document.querySelector('.nav');
-  let navVisible = true;
-
-  function onScroll() {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > lastScrollY && currentScrollY > 10) {
-          // 아래로 스크롤: 네비게이션 숨김
-          if (navVisible) {
-            nav.style.opacity = '0';
-            nav.style.pointerEvents = 'none';
-            nav.style.transition = 'opacity 0.4s';
-            navVisible = false;
-          }
-        } else {
-          // 위로 스크롤: 네비게이션 보임
-          if (!navVisible) {
-            nav.style.opacity = '1';
-            nav.style.pointerEvents = 'auto';
-            nav.style.transition = 'opacity 0.4s';
-            navVisible = true;
-          }
-        }
-        lastScrollY = currentScrollY;
-        ticking = false;
-      });
-      ticking = true;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>choyoung | Connection. Refine.</title>
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://use.typekit.net/sqz6pad.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/wanted-sans@latest/wanted-sans.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- 원본 CSS 로컬 복사본 (CORS 회피) -->
+    <link href="loco-style.css" rel="stylesheet">
+    <style>
+    :root {
+        --color-coral: #fb5e79; --color-red: #e53118; --color-dark: #24292e;
+        --color-charcoal: #2c2c2c; --color-cream: #f4f2ed; --color-light-gray: #d9d9d9;
+        --color-white: #ffffff; --color-black: #000000; --color-key: var(--color-red);
+        --font-body: 'Pretendard Variable', 'Pretendard', sans-serif;
+        --font-ui: 'Space Mono', monospace;
+        --font-display: degular-display, degular, 'Arial Black', sans-serif;
+        --text-hero: clamp(3.5rem, 1.9348rem + 4.6377vw, 7.5rem);
+        --text-section-head: clamp(24px, 2.08vw, 40px);
+        --text-item-title: clamp(18px, 1.25vw, 24px);
+        --text-body: clamp(16px, 1.04vw, 20px);
+        --text-label: clamp(0.75rem, 0.6522rem + 0.2899vw, 1rem);
+        --text-nav: 14px; --text-small: 14px;
+        --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600;
+        --lh-tight: 1.2; --lh-normal: 1.4; --lh-label: 1.25;
+        --section-px: 40px; --section-py: 120px;
+        --gap-sm: 20px; --gap-md: 40px; --gap-lg: 80px;
+        --nav-width: 600px; --nav-height: 120px;
+        --nav-pad-top: 40px; --nav-pad-left: 40px;
+        --content-width: 920px; --radius-nav: 6px; --radius-btn: 4px;
+        --border-line: 1px solid currentColor; --ease-default: 0.3s ease;
+        --z-showreel: 1; --z-hero: 2; --z-nav: 100;
     }
-    // 배경색 변화
-    const maxScroll = 500; // 500px까지 변화
-    const scrollY = Math.min(window.scrollY, maxScroll);
-    // #34D6FF(R:52,G:214,B:255) → #ffffff(R:255,G:255,B:255)
-    const r = Math.round(52 + (255-52)*(scrollY/maxScroll));
-    const g = Math.round(214 + (255-214)*(scrollY/maxScroll));
-    const b = Math.round(255 + (255-255)*(scrollY/maxScroll));
-    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
-  }
-  window.addEventListener('scroll', onScroll);
+    body { padding: 60px 0; background: #000; }
+    /* 히어로 */
+    .section-hero { background-color: #040404 !important; }
+    /* 네비게이션 */
+    .site-nav { all: unset !important; display: block !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; z-index: 100 !important; background: rgba(0,0,0,0.5) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; border-bottom: 1px solid rgba(112,115,124,0.16) !important; }
+    .nav-main-panel { all: unset !important; display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 1100px !important; margin: 0 auto !important; padding: 14px 20px !important; box-sizing: border-box !important; }
+    .nav-logo { all: unset !important; cursor: pointer !important; }
+    .nav-logo img { display: block !important; height: 24px !important; width: auto !important; }
+    .nav-contact { display: none !important; }
+    .nav-menu { all: unset !important; display: flex !important; gap: 40px !important; list-style: none !important; }
+    .nav-menu__item { all: unset !important; }
+    .nav-menu__dot { display: none !important; }
+    .nav-menu__link { all: unset !important; color: #fff !important; font-family: 'Wanted Sans','Pretendard Variable',sans-serif !important; font-weight: 400 !important; font-size: 16px !important; letter-spacing: 0.0057em !important; text-transform: capitalize !important; cursor: pointer !important; transition: color 0.2s ease !important; }
+    .nav-menu__link:hover { color: #C9C9C9 !important; }
+    .nav-hamburger { display: none !important; }
+    .nav-mobile-menu { display: none !important; }
+    /* 히어로 본문 */
+    .hero-body { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; position: absolute !important; top: calc(50% + 67px) !important; left: 50% !important; transform: translateX(-50%) !important; width: calc(100% - 80px) !important; max-width: 1100px !important; height: auto !important; padding: 0 !important; margin: 0 !important; background: none !important; }
+    .hero-intro { margin-bottom: 10px; }
+    .hero-intro p { font-family: 'Pretendard Variable','Pretendard',sans-serif; font-size: 18px; font-weight: 400; line-height: 1.4; letter-spacing: -0.18px; color: #fff; margin: 0; }
+    .hero-headline { margin-top: 0 !important; }
+    /* 헤드라인 */
+    .headline--zen { font-family: 'Zen Antique', serif !important; font-weight: 400 !important; text-transform: none !important; }
+    .headline--zen .headline__line { overflow: visible !important; }
+    .headline--zen .headline__inner { font-family: 'Zen Antique', serif !important; font-size: clamp(2.5rem, 1rem + 4.5vw, 5rem) !important; line-height: 1.1 !important; letter-spacing: 1.448px !important; color: #fff !important; opacity: 1 !important; transform: none !important; visibility: visible !important; }
+    /* Works / Casestudy 섹션 — 피그마 스펙 */
+    .works-wrapper { background: #fff; padding-top: 60px; }
+    .section-works { padding: 0 40px; }
+    .section-works + .section-works { margin-top: 80px; }
+    .section-works:last-of-type { padding-bottom: 120px; }
+    .section-works__label { font-family: 'Wanted Sans','Pretendard Variable',sans-serif; font-size: 20px; font-weight: 800; line-height: 150%; letter-spacing: 0.0057em; text-transform: capitalize; color: #000; margin: 0; padding: 8px 0; border-bottom: 1px solid #000; margin-bottom: 20px; }
+    .project-grid { display: flex; gap: 14px; }
+    .project-card { display: flex; flex-direction: column; gap: 12px; flex: 1; cursor: pointer; text-decoration: none; color: #000; }
+    /* 이미지: 정사각형 */
+    .card-image-wrap { position: relative; overflow: clip; aspect-ratio: 1/1; }
+    .card-image-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; transition: filter 0.4s ease, transform 0.4s ease; }
+    .project-card:hover .card-image-wrap img { filter: blur(5px); transform: scale(1.2); }
+    /* 텍스트 영역 */
+    .card-text { display: flex; flex-direction: column; gap: 12px; }
+    .card-title { font-family: 'Wanted Sans','Pretendard Variable',sans-serif; font-size: 20px; font-weight: 500; line-height: 150%; text-transform: capitalize; color: #000; margin: 0; }
+    .card-divider { height: 1px; background: #000; }
+    .card-desc { font-family: 'Wanted Sans','Pretendard Variable',sans-serif; font-size: 14px; font-weight: 400; line-height: 150%; text-transform: capitalize; color: #000; margin: 0; }
+    .card-tags { display: flex; align-items: center; gap: 6px; font-family: 'Wanted Sans','Pretendard Variable',sans-serif; font-size: 14px; font-weight: 400; line-height: 144.5%; color: #585858; margin: 0; }
+    .tag-sep { width: 1px; height: 14px; background: #585858; }
+    @media (max-width: 980px) {
+        .section-works { padding: 0 20px; }
+        .section-works + .section-works { margin-top: 40px; }
+        .project-grid { flex-direction: column; }
+    }
 
-  document.getElementById('navWork').addEventListener('click', function(e) {
-    e.preventDefault();
-    const cards = document.querySelector('.cards');
-    const navHeight = document.querySelector('.nav').offsetHeight;
-    const top = cards.getBoundingClientRect().top + window.scrollY - navHeight;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-  </script>
+    /* 쇼릴 카드 정렬 */
+    @media (min-width: 1181px) { .showreel-card { right: calc((100vw - 1100px) / 2 + 12.5px) !important; } }
+    /* 쇼릴 캐러셀 */
+    .showreel-swiper { width: 100%; height: 100%; }
+    .showreel-swiper .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    /* About 섹션 */
+    .section-about { background: #040404; padding: 120px 0; min-height: 100vh; display: flex; align-items: center; }
+    .about-inner { display: flex; align-items: flex-end; gap: 60px; max-width: 1068px; margin: 0 auto; padding: 0 40px; }
+    .about-left { flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 60px; }
+    .about-headline { font-family: 'Zen Antique', serif; font-weight: 400; font-size: 54px; line-height: 140%; letter-spacing: 0.0181em; text-transform: capitalize; color: #fff; margin: 0; }
+    .about-desc { font-family: 'Pretendard Variable', sans-serif; font-weight: 400; font-size: 16px; line-height: 160%; letter-spacing: -0.01em; color: #fff; margin: 0; }
+    .about-photo { flex: 0 0 364px; width: 364px; height: 364px; border-radius: 20px; overflow: hidden; }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+    @media (max-width: 980px) {
+        .section-about { padding: 60px 0; }
+        .about-inner { flex-direction: column; align-items: stretch; gap: 40px; padding: 0 20px; }
+        .about-headline { font-size: 36px; }
+        .about-photo { flex: none; width: 100%; height: 300px; }
+    }
+    /* 푸터 */
+    .site-footer--empty { height: 200px; padding: 0; background-color: var(--color-white); }
+    /* 모바일 */
+    @media (max-width: 980px) {
+        .hero-body { position: relative !important; top: auto !important; left: auto !important; transform: none !important; width: auto !important; max-width: none !important; padding: 70px 20px 30px !important; }
+        .showreel-card { position: relative !important; top: auto !important; left: auto !important; right: auto !important; width: 100% !important; height: auto !important; aspect-ratio: 16/9 !important; margin: 0 !important; border-radius: 0 !important; }
+        .section-hero { height: auto !important; min-height: auto !important; display: flex !important; flex-direction: column !important; }
+    }
+    </style>
+</head>
+<body>
+
+<div class="page-transition" aria-hidden="true" style="opacity: 0; visibility: hidden;"></div>
+
+<nav class="site-nav" role="navigation" aria-label="Main Navigation">
+    <div class="nav-main-panel">
+        <a href="#" class="nav-logo" aria-label="choyoung">
+            <img src="logo.svg" alt="choyoung" width="100" height="32">
+        </a>
+        <ul class="nav-menu" role="list">
+            <li class="nav-menu__item">
+                <a href="#works" class="nav-menu__link">Works</a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="#contact" class="nav-menu__link">About</a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="resume.pdf" target="_blank" class="nav-menu__link">Resume</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="page-wrapper">
+
+<section class="section-hero js-hero" id="hero">
+    <div class="hero-body js-hero-body">
+        <div class="hero-intro">
+            <p>시도하고 배우며 아이디어를 다듬는 과정을 즐기는 디자이너입니다.</p>
+            <p>사용자와 서비스를 깊이 탐구해 연결하고, 의미 있는 가치를 만들기 위해 고민합니다.</p>
+        </div>
+        <div class="hero-headline">
+            <h1 class="headline headline--zen">
+                <span class="headline__line">
+                    <span class="headline__inner">Connection. Refine.</span>
+                </span>
+                <span class="headline__line">
+                    <span class="headline__inner">Crafting meaningful value.</span>
+                </span>
+            </h1>
+        </div>
+    </div>
+    <div class="showreel-card js-showreel-card" aria-hidden="true">
+        <div class="swiper showreel-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="carousel/carousel_01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="carousel/carousel_02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="carousel/carousel_03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="carousel/carousel_04.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="carousel/carousel_05.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="carousel/carousel_06.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="works-wrapper" id="works">
+<!-- Works -->
+<section class="section-works">
+    <h2 class="section-works__label">Works</h2>
+    <div class="project-grid">
+        <a href="work-01.html" class="project-card">
+            <div class="card-image-wrap"><img src="%23thumbnail_square_02/Works_square_01.jpg" alt="AI로 광고 캠페인 타겟 설정하기"></div>
+            <div class="card-text">
+                <h3 class="card-title">AI로 광고 캠페인 타겟 설정하기</h3>
+                <div class="card-divider"></div>
+                <p class="card-desc">기업 고객이 사용자 의료 데이터를 활용해 최적의 광고 타겟을 AI로 쉽고 빠르게 추출할 수 있도록 비즈 웹사이트의 UI/UX를 개편했습니다.</p>
+                <p class="card-tags"><span>Web</span><span class="tag-sep"></span><span>B2B</span><span class="tag-sep"></span><span>기여도 80%</span></p>
+            </div>
+        </a>
+        <a href="work-02.html" class="project-card">
+            <div class="card-image-wrap"><img src="%23thumbnail_square_02/Works_square_02.jpg" alt="LLM 서비스 에티 개선하기"></div>
+            <div class="card-text">
+                <h3 class="card-title">LLM 서비스 에티 개선하기</h3>
+                <div class="card-divider"></div>
+                <p class="card-desc">에티는 사용자의 건강 데이터를 기반으로 개인화된 답변을 제공하는 LLM 서비스입니다. UX 고도화와 AI 경험 향상을 중심으로 개선 방안을 고민했습니다.</p>
+                <p class="card-tags"><span>App</span><span class="tag-sep"></span><span>B2C</span><span class="tag-sep"></span><span>기여도 80%</span></p>
+            </div>
+        </a>
+        <a href="work-03.html" class="project-card">
+            <div class="card-image-wrap"><img src="%23thumbnail_square_02/Works_square_03.jpg" alt="광고 성과 대시보드 디자인"></div>
+            <div class="card-text">
+                <h3 class="card-title">광고 성과 대시보드 디자인</h3>
+                <div class="card-divider"></div>
+                <p class="card-desc">캐주얼 게임 회사 111%의 콘텐츠팀은 매주 다양한 매체에서 광고 테스트를 진행합니다. 매체별 광고 성과를 쉽게 비교·분석할 수 있도록 통합 대시보드를 디자인했습니다.</p>
+                <p class="card-tags"><span>Web</span><span class="tag-sep"></span><span>Dashboard</span><span class="tag-sep"></span><span>기여도 100%</span></p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Casestudy -->
+<section class="section-works" id="casestudy">
+    <h2 class="section-works__label">Casestudy</h2>
+    <div class="project-grid">
+        <a href="casestudy-01.html" class="project-card">
+            <div class="card-image-wrap"><img src="%23thumbnail_square_01/Casestudy_square_01.jpg" alt="네이버 시리즈온 리디자인"></div>
+            <div class="card-text">
+                <h3 class="card-title">네이버 시리즈온 리디자인</h3>
+                <div class="card-divider"></div>
+                <p class="card-desc">시리즈온은 영화, 드라마, 애니메이션 등 다양한 콘텐츠를 제공하는 네이버의 OTT 서비스입니다. 콘텐츠 탐색 경험을 개선해 서비스 인지도와 사용자 수를 높이고자 했습니다.</p>
+                <p class="card-tags"><span>App</span><span class="tag-sep"></span><span>B2C</span></p>
+            </div>
+        </a>
+        <a href="casestudy-02.html" class="project-card">
+            <div class="card-image-wrap"><img src="%23thumbnail_square_01/Casestudy_square_02.jpg" alt="게임 커뮤니티 서비스 디자인"></div>
+            <div class="card-text">
+                <h3 class="card-title">게임 커뮤니티 서비스 디자인</h3>
+                <div class="card-divider"></div>
+                <p class="card-desc">게임 정보를 한곳에 통합하고, 유저 간 소통을 연결하는 가상의 서비스를 기획하고 디자인했습니다. 이 서비스는 게임을 중심으로 새로운 경험을 만들어가는 것을 목표로 합니다.</p>
+                <p class="card-tags"><span>App</span><span class="tag-sep"></span><span>B2C</span></p>
+            </div>
+        </a>
+        <a href="casestudy-03.html" class="project-card">
+            <div class="card-image-wrap"><img src="%23thumbnail_square_01/Casestudy_square_03.jpg" alt="패스오더 리디자인"></div>
+            <div class="card-text">
+                <h3 class="card-title">패스오더 리디자인</h3>
+                <div class="card-divider"></div>
+                <p class="card-desc">패스오더는 카페 방문 전 주문·결제·적립을 하나의 흐름으로 처리하는 모바일 플랫폼입니다. 서비스의 강점을 분석하고, 개선 전략을 도출하는 데 초점을 맞췄습니다.</p>
+                <p class="card-tags"><span>App</span><span class="tag-sep"></span><span>B2C</span></p>
+            </div>
+        </a>
+    </div>
+</section>
+</div>
+
+
+</div>
+
+<!-- About -->
+<section class="section-about" id="contact">
+    <div class="about-inner">
+        <div class="about-left">
+            <h2 class="about-headline">Focus on impact<br>Design for value</h2>
+            <p class="about-desc">게임 광고 디자이너로 커리어를 시작해 약 4년 간 400건 이상의 광고 테스트를 진행하며, 사용자 반응과 성과 개선을 위한 디자인에 몰두해왔습니다. 그 과정에서 단편적인 소재보다 경험 자체를 설계하는 일에 더 깊은 흥미를 느끼게 되었습니다. 이후 UI/UX 디자이너로 전향해 서비스의 구조와 흐름을 중심으로 제품을 설계하고 있습니다. 반복적인 실험과 정량적 인사이트를 통해 문제를 정의하고, 복잡한 문제를 해결하는 과정을 즐깁니다.</p>
+        </div>
+        <div class="about-photo">
+            <img src="000040380010.png" alt="프로필 사진">
+        </div>
+    </div>
+</section>
+
+
+<!-- 원본과 동일한 JS 라이브러리 -->
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var locoVars = {"templateUrl":"","ajaxUrl":""};
+</script>
+<!-- Swiper Creative 초기화 -->
+<script>
+new Swiper(".showreel-swiper", {
+    grabCursor: true,
+    effect: "creative",
+    autoplay: { delay: 2000, disableOnInteraction: false },
+    loop: true,
+    speed: 1300,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    creativeEffect: {
+        prev: { shadow: true, translate: ["-20%", 0, -1] },
+        next: { translate: ["100%", 0, 0] },
+    },
+});
+</script>
+<!-- 쇼릴 카드 right 값 주입 (loco-main.js보다 먼저 실행) -->
+<script>
+if (window.innerWidth > 1181) {
+    window.__CARD_RIGHT = (window.innerWidth - 1100) / 2 + 27.5;
+}
+</script>
+<!-- 원본 테마 JS 번들 로컬 복사본 -->
+<script src="loco-main.js"></script>
+<!-- 히어로 텍스트 스크롤 페이드아웃 -->
+<script>
+gsap.registerPlugin(ScrollTrigger);
+gsap.set(".headline--zen .headline__inner", { opacity: 1, y: 0, visibility: "visible" });
+document.querySelectorAll('.nav-menu__link[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        var target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+});
+// 외부 페이지에서 해시로 진입 시 네비 높이 보정
+if (window.location.hash) {
+    setTimeout(function() {
+        var target = document.querySelector(window.location.hash);
+        if (target) {
+            var top = target.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+    }, 300);
+}
+gsap.to(".hero-intro, .hero-headline", {
+    opacity: 0,
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".section-hero",
+        start: "top top",
+        end: "40% top",
+        scrub: true
+    }
+});
+</script>
 </body>
-</html> 
+</html>

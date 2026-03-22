@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LLM 서비스 에티 개선하기 | choyoung</title>
+    <link href="https://cdn.jsdelivr.net/npm/wanted-sans@latest/wanted-sans.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+    <link href="detail-style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="page-transition" aria-hidden="true"></div>
+
+<nav class="detail-nav">
+    <div class="detail-nav__inner">
+        <a href="index.html" class="detail-nav__logo" aria-label="choyoung">
+            <img src="logo.svg" alt="choyoung">
+        </a>
+        <ul class="detail-nav__links" role="list">
+            <li><a href="index.html#works" class="detail-nav__link">Works</a></li>
+            <li><a href="index.html#contact" class="detail-nav__link">About</a></li>
+            <li><a href="resume.pdf" target="_blank" class="detail-nav__link">Resume</a></li>
+        </ul>
+    </div>
+    <div class="detail-nav__divider"></div>
+</nav>
+
+<main>
+    <section class="detail-hero">
+        <img src="work-02/wark02_thumbnail.jpg" alt="LLM 서비스 에티 개선하기">
+    </section>
+
+    <section class="detail-info">
+        <div class="detail-info__left">
+            <h1 class="detail-info__title">LLM 서비스 에티 개선하기 : 평범한 AI 챗봇에서 스마트한 건강 비서로</h1>
+            <div class="detail-info__meta">
+                <div class="detail-info__meta-group">
+                    <span class="detail-info__meta-label">ROLE</span>
+                    <span class="detail-info__meta-value">UI/UX Design</span>
+                </div>
+                <div class="detail-info__meta-group">
+                    <span class="detail-info__meta-label">DATE</span>
+                    <span class="detail-info__meta-value">2025.12 - 2026.01</span>
+                </div>
+            </div>
+        </div>
+        <div class="detail-info__right">
+            <p class="detail-info__desc">에티는 사용자 건강 데이터를 기반으로 개인화된 답변을 제공하는 LLM입니다. 이번 개선에서는 UX를 고도화해 AI 답변의 정확도와 일관성을 강화했습니다. 또한 추천 질문 기반의 대화 흐름을 설계해 사용자 경험을 한층 개선했습니다.</p>
+        </div>
+    </section>
+
+    <section class="detail-contents">
+        <img src="work-02/work02_01.jpg" alt="">
+        <img src="work-02/work02_02.jpg" alt="">
+        <img src="work-02/work02_03.jpg" alt="">
+        <img src="work-02/work02_04.jpg" alt="">
+        <img src="work-02/work02_05.jpg" alt="">
+        <img src="work-02/work02_06.jpg" alt="">
+        <img src="work-02/work02_07.jpg" alt="">
+        <img src="work-02/work02_08.jpg" alt="">
+    </section>
+
+    <section class="detail-bottom detail-bottom--both">
+        <a href="work-01.html" class="detail-prev">
+            <div class="detail-prev__arrow">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M7.5 2L3.5 6L7.5 10" stroke="#000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="detail-prev__text">
+                <span class="detail-prev__label">Previous Project</span>
+                <span class="detail-prev__title">AI로 광고 캠페인 타겟 설정하기</span>
+            </div>
+        </a>
+        <a href="work-03.html" class="detail-next">
+            <div class="detail-next__text">
+                <span class="detail-next__label">Next Project</span>
+                <span class="detail-next__title">광고 성과 대시보드 디자인</span>
+            </div>
+            <div class="detail-next__arrow">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M4.5 2L8.5 6L4.5 10" stroke="#000" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </a>
+    </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function() {
+    var overlay = document.querySelector('.page-transition');
+    if (!overlay) return;
+    function fadeOut() { gsap.fromTo(overlay, { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.6, ease: 'power2.out', delay: 0.1 }); }
+    fadeOut();
+    window.addEventListener('pagehide', function() { gsap.set(overlay, { autoAlpha: 1 }); });
+    window.addEventListener('pageshow', function(e) { if (e.persisted) fadeOut(); });
+    document.querySelectorAll('a[href]').forEach(function(link) {
+        var href = link.getAttribute('href') || '';
+        if (link.hostname !== window.location.hostname || link.target === '_blank' || href.startsWith('#')) return;
+        link.addEventListener('click', function(e) {
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+            e.preventDefault();
+            gsap.to(overlay, { autoAlpha: 1, duration: 0.45, ease: 'power2.in', onComplete: function() { window.location.href = link.href; } });
+        });
+    });
+})();
+gsap.from('.detail-hero img', { opacity: 0, y: 20, duration: 0.8, ease: 'power2.out', delay: 0.2 });
+gsap.from('.detail-info__title', { opacity: 0, y: 16, duration: 0.7, ease: 'power2.out', delay: 0.4 });
+gsap.from('.detail-info__meta', { opacity: 0, y: 16, duration: 0.7, ease: 'power2.out', delay: 0.5 });
+gsap.from('.detail-info__desc', { opacity: 0, y: 16, duration: 0.7, ease: 'power2.out', delay: 0.6 });
+</script>
+</body>
+</html>
