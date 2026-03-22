@@ -14,7 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/wanted-sans@latest/wanted-sans.css" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <!-- 원본 CSS 로컬 복사본 (CORS 회피) -->
     <link href="loco-style.css" rel="stylesheet">
     <style>
     :root {
@@ -292,9 +291,8 @@ if (window.innerWidth > 1181) {
     window.__CARD_RIGHT = (window.innerWidth - 1100) / 2 + 27.5;
 }
 </script>
-<!-- 원본 테마 JS 번들 로컬 복사본 -->
 <script src="loco-main.js"></script>
-<!-- 히어로 텍스트 스크롤 페이드아웃 -->
+<!-- 네비 스크롤, 히어로 페이드아웃, 앵커 스크롤 -->
 <script>
 gsap.registerPlugin(ScrollTrigger);
 gsap.set(".headline--zen .headline__inner", { opacity: 1, y: 0, visibility: "visible" });
