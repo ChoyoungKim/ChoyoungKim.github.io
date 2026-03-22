@@ -93,6 +93,8 @@ body {
 }
 .detail-contents img {
     display: block; width: 100%; height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
     background: #f0f0f0;
 }
 
